@@ -16,7 +16,7 @@ def summarize():
 
     title.config(state='normal')
     author.config(state='normal')
-    #publication.config(state='normal')
+    publication.config(state='normal')
     summary.config(state='normal')
     sentiment.config(state='normal')
 
@@ -26,8 +26,8 @@ def summarize():
     author.delete('1.0', 'end')
     author.insert('1.0', article.authors)
 
-    #publication.delete('1.0', 'end')
-    #publication.insert('1.0', article.publish_date)
+    publication.delete('1.0', 'end')
+    publication.insert('1.0', article.publish_date)
 
     summary.delete('1.0', 'end')
     summary.insert('1.0', article.summary)
@@ -41,7 +41,7 @@ def summarize():
 
     title.config(state='disabled')
     author.config(state='disabled')
-    #publication.config(state="disabled")
+    publication.config(state="disabled")
     summary.config(state='disabled')
     sentiment.config(state='disabled')
 
@@ -67,12 +67,12 @@ author.config(state='disabled', bg='#dddddd')
 author.pack()
 
 
-#plabel = tk.Label(root, text="Publishing Date" )
-#plabel.pack()
+plabel = tk.Label(root, text="Publishing Date" )
+plabel.pack()
 
-#publication = tk.Text(root, height=1, width=140,font=('arial',11))
-#publication.config(state='disabled', bg='#dddddd')
-#publication.pack()
+publication = tk.Text(root, height=1, width=140,font=('arial',11))
+publication.config(state='disabled', bg='#dddddd')
+publication.pack()
 
 
 slabel = tk.Label(root, text="Summary")
